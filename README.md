@@ -5,9 +5,9 @@
   
 ## Model.java
 
-## Pode ser dividido em 7 partes principais:
+### Pode ser dividido em 7 partes principais:
 
-## PARTE 1:
+### PARTE 1:
 
 <strong> Pacote e Importaçoes: </strong>
 * package PacmanCode;
@@ -23,14 +23,14 @@
 * import javax.swing.JPanel;
 * import javax.swing.Timer;
 
-## PARTE 2:
+### PARTE 2:
 `public class Model extends JPanel implements ActionListener {
 
 }`
 
 <p>A classe Model estende a classe JPanel e implementa a interface ActionListener. Isso significa que essa classe será responsável por representar a tela do jogo e também por escutar os eventos de ação (temporizador).</p>
 
-## PARTE 3 - Variaveis e Constantes:
+### PARTE 3 - Variaveis e Constantes:
 
 `private Dimension d;
 private final Font smallFont = new Font("Arial", Font.BOLD, 14);
@@ -44,7 +44,7 @@ private final int MAX_GHOSTS = 12;`
 
 <p>Nessa parte, são declaradas as variáveis e constantes que serão utilizadas no jogo, como tamanho do bloco(BLOCK_SIZE), tamanho da tela(SCREEN_SIZE), quantidade máxima de fantasmas(MAX_GHOSTS) etc.</p>
 
-## PARTE 4 - Variáveis de Posição e Movimento:
+### PARTE 4 - Variáveis de Posição e Movimento:
 
 `private int N_GHOSTS = 6;
 private int lives, score;
@@ -68,7 +68,7 @@ lives, score: Representam as vidas e a pontuação do jogador.
 
 <p>Essas variáveis são cruciais para controlar o movimento dos personagens e determinar as ações que ocorrem durante o jogo. Por exemplo, o movimento do Pac-Man é controlado pela variável pacmand_x e pacmand_y, que é alterada quando o jogador pressiona as teclas de seta. A posição do Pac-Man é atualizada multiplicando-se o deslocamento pelo valor da velocidade do Pac-Man (definido por PACMAN_SPEED). A movimentação dos fantasmas é controlada pelas variáveis ghost_x e ghost_y, que são atualizadas de acordo com seus deslocamentos ghost_dx e ghost_dy e velocidades individuais (ghostSpeed).</p>
 
-## PARTE 5 - Matriz de Dados do Labirinto:
+### PARTE 5 - Matriz de Dados do Labirinto:
 
 `private final short[] levelData = {
             19, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22,
@@ -103,7 +103,7 @@ lives, score: Representam as vidas e a pontuação do jogador.
 
 A matriz screenData é uma matriz semelhante à levelData e é usada para armazenar temporariamente o estado atual do labirinto durante o jogo, permitindo que elementos sejam modificados sem afetar a estrutura original do labirinto.</p>
 
-## PARTE 6 - Variáveis do Jogo:
+### PARTE 6 - Variáveis do Jogo:
 
 `private final int[] validSpeeds = {1, 2, 3, 4, 6, 8};
 private int currentSpeed = 4;
@@ -120,7 +120,7 @@ private Timer timer;`
 
 <p>Essas variáveis são importantes para controlar a dinâmica do jogo, como a velocidade de movimento dos fantasmas, o nível de dificuldade do jogo e a atualização periódica da tela para criar a animação. O uso do temporizador (timer) garante que o jogo seja atualizado em um ritmo constante, evitando atualizações muito rápidas ou muito lentas, o que poderia afetar a jogabilidade e a experiência do jogador.</p>
 
-## PARTE 7 - Métodos do Jogo:
+### PARTE 7 - Métodos do Jogo:
 
 * public Model(): O construtor da classe Model. É chamado quando um objeto da classe é criado. Esse construtor é responsável por inicializar as variáveis, carregar as imagens e configurar o jogo para iniciar.
 
