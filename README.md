@@ -31,28 +31,28 @@
 
 ### PARTE 3 - Variaveis e Constantes:
 
-`private Dimension d;`
-`private final Font smallFont = new Font("Arial", Font.BOLD, 14);`
-`private boolean inGame = false;`
-`private boolean dying = false;`
+* `private Dimension d;`
+* `private final Font smallFont = new Font("Arial", Font.BOLD, 14);`
+* `private boolean inGame = false;`
+* `private boolean dying = false;`
 
-`private final int BLOCK_SIZE = 24;`
-`private final int N_BLOCKS = 15;`
-`private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;`
-`private final int MAX_GHOSTS = 12;`
+* `private final int BLOCK_SIZE = 24;`
+* `private final int N_BLOCKS = 15;`
+* `private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;`
+* `private final int MAX_GHOSTS = 12;`
 
 <p>Nessa parte, são declaradas as variáveis e constantes que serão utilizadas no jogo, como tamanho do bloco(BLOCK_SIZE), tamanho da tela(SCREEN_SIZE), quantidade máxima de fantasmas(MAX_GHOSTS) etc.</p>
 
 ### PARTE 4 - Variáveis de Posição e Movimento:
 
-`private int N_GHOSTS = 6;`
-`private int lives, score;`
-`private int[] dx, dy;`
-`private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;`
-`private Image heart, ghost;`
-`private Image up, down, left, right;`
-`private int pacman_x, pacman_y, pacmand_x, pacmand_y;`
-`private int req_dx, req_dy;`
+* `private int N_GHOSTS = 6;`
+* `private int lives, score;`
+* `private int[] dx, dy;`
+* `private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;`
+* `private Image heart, ghost;`
+* `private Image up, down, left, right;`
+* `private int pacman_x, pacman_y, pacmand_x, pacmand_y;`
+* `private int req_dx, req_dy;`
 
 * N_GHOSTS: Define o número de fantasmas no jogo. Nesse caso, há inicialmente 6 fantasmas.
 lives, score: Representam as vidas e a pontuação do jogador.
@@ -104,10 +104,10 @@ A matriz screenData é uma matriz semelhante à levelData e é usada para armaze
 
 ### PARTE 6 - Variáveis do Jogo:
 
-`private final int[] validSpeeds = {1, 2, 3, 4, 6, 8};`
-`private int currentSpeed = 4;`
-`private short[] screenData;`
-`private Timer timer;`
+* `private final int[] validSpeeds = {1, 2, 3, 4, 6, 8};`
+* `private int currentSpeed = 4;`
+* `private short[] screenData;`
+* `private Timer timer;`
 
 * validSpeeds: É um array que contém os valores de velocidades válidas para os fantasmas. Esses valores são usados para definir a velocidade de cada fantasma durante o jogo. No código, os valores são 1, 2, 3, 4, 6 e 8, representando diferentes níveis de velocidade. O nível de velocidade é escolhido aleatoriamente para cada fantasma quando o jogo começa.
 
