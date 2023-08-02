@@ -31,15 +31,15 @@
 
 ### PARTE 3 - Variaveis e Constantes:
 
-* `private Dimension d;`
-* `private final Font smallFont = new Font("Arial", Font.BOLD, 14);`
-* `private boolean inGame = false;`
-* `private boolean dying = false;`
+ `private Dimension d;`<br>
+ `private final Font smallFont = new Font("Arial", Font.BOLD, 14);`<br>
+ `private boolean inGame = false;`<br>
+ `private boolean dying = false;`<br>
 
-* `private final int BLOCK_SIZE = 24;`
-* `private final int N_BLOCKS = 15;`
-* `private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;`
-* `private final int MAX_GHOSTS = 12;`
+ `private final int BLOCK_SIZE = 24;`<br>
+ `private final int N_BLOCKS = 15;`<br>
+ `private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;`<br>
+ `private final int MAX_GHOSTS = 12;`<br>
 
 <p>Nessa parte, são declaradas as variáveis e constantes que serão utilizadas no jogo, como tamanho do bloco(BLOCK_SIZE), tamanho da tela(SCREEN_SIZE), quantidade máxima de fantasmas(MAX_GHOSTS) etc.</p>
 
