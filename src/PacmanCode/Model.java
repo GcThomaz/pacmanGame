@@ -1,7 +1,6 @@
 package PacmanCode;
 
 import javax.swing.*;
-import javax.tools.Tool;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +10,7 @@ import java.awt.event.KeyEvent;
 public class Model extends JPanel implements ActionListener {
 
     private Dimension d;
-    private Font smallFont = new Font("Arial", Font.BOLD, 14);
+    private final Font smallFont = new Font("Arial", Font.BOLD, 14);
     private boolean inGame = false;
     private boolean dying = false;
 
@@ -19,7 +18,6 @@ public class Model extends JPanel implements ActionListener {
     private final int N_BLOCKS = 15;
     private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;
     private final int MAX_GHOSTS = 12;
-    private final int PACMAN_SPEED = 6;
 
     private int N_GHOSTS = 6;
     private int lives, score;
@@ -32,13 +30,12 @@ public class Model extends JPanel implements ActionListener {
     private int pacman_x, pacman_y, pacman_dx, pacman_dy;
     private int req_dx, req_dy;
 
-    private final int validSpeeds[] = {1, 2, 3, 4, 5, 6, 7, 8};
-    private final int maxSpeed = 6;
+    private final int [] validSpeeds = {1, 2, 3, 4, 5, 6, 7, 8};
     private int currentSpeed = 3;
     private short[] screenData;
     private Timer timer;
 
-    private final short levelData[] = {
+    private final short[] levelData = {
             19, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22,
             17, 16, 16, 16, 16, 24, 16, 16, 16, 16, 16, 16, 16, 16, 20,
             25, 24, 24, 24, 28, 0, 17, 16, 16, 16, 16, 16, 16, 16, 20,
@@ -137,7 +134,7 @@ public class Model extends JPanel implements ActionListener {
         short ch;
 
         if (pacman_x % BLOCK_SIZE == 0 && pacman_y % BLOCK_SIZE == 0) {
-            pos = pacman_x / BLOCK_SIZE + N_BLOCKS * (int) (pacman_y / BLOCK_SIZE);
+            pos = pacman_x / BLOCK_SIZE + N_BLOCKS * (pacman_y / BLOCK_SIZE);
             ch = screenData[pos];
 
             if ((ch & 16) != 0) {
@@ -161,6 +158,7 @@ public class Model extends JPanel implements ActionListener {
                 pacman_dy = 0;
             }
         }
+        int PACMAN_SPEED = 6;
         pacman_x = pacman_x + PACMAN_SPEED * pacman_dx;
         pacman_y = pacman_y + PACMAN_SPEED * pacman_dy;
     }
@@ -183,7 +181,7 @@ public class Model extends JPanel implements ActionListener {
 
         for (int i = 0; i < N_GHOSTS; i++) {
             if (ghost_x[i] % BLOCK_SIZE == 0 && ghost_y[i] % BLOCK_SIZE == 0) {
-                pos = ghost_x[i] / BLOCK_SIZE + N_BLOCKS * (int) (ghost_y[i] / BLOCK_SIZE);
+                pos = ghost_x[i] / BLOCK_SIZE + N_BLOCKS * (ghost_y[i] / BLOCK_SIZE);
 
                 count = 0;
                 if ((screenData[pos] & 1) == 0 && ghost_dx[i] != 1) {
@@ -258,6 +256,7 @@ public class Model extends JPanel implements ActionListener {
             if (N_GHOSTS < MAX_GHOSTS) {
                 N_GHOSTS++;
             }
+            int maxSpeed = 6;
             if (currentSpeed < maxSpeed) {
                 currentSpeed++;
             }
