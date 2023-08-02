@@ -24,7 +24,7 @@
 * import javax.swing.Timer;
 
 ## PARTE 2:
-`rgb(9, 105, 218)``public class Model extends JPanel implements ActionListener {
+`public class Model extends JPanel implements ActionListener {
 
 }`
 
