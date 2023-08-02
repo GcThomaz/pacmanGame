@@ -2,9 +2,10 @@
 
 ## Pacman.java
   Contém o método main onde vai buildar todas as classes e componentes do projeto.
-##Model.java
+  
+## Model.java
 
-### Pode ser dividido em 7 partes principais:
+## Pode ser dividido em 7 partes principais:
 
 ## 1 PARTE:
 
