@@ -104,10 +104,10 @@ A matriz screenData é uma matriz semelhante à levelData e é usada para armaze
 
 ### PARTE 6 - Variáveis do Jogo:
 
-* `private final int[] validSpeeds = {1, 2, 3, 4, 6, 8};`
-* `private int currentSpeed = 4;`
-* `private short[] screenData;`
-* `private Timer timer;`
+ `private final int[] validSpeeds = {1, 2, 3, 4, 6, 8};`<br>
+ `private int currentSpeed = 4;`<br>
+ `private short[] screenData;`<br>
+ `private Timer timer;`<br>
 
 * validSpeeds: É um array que contém os valores de velocidades válidas para os fantasmas. Esses valores são usados para definir a velocidade de cada fantasma durante o jogo. No código, os valores são 1, 2, 3, 4, 6 e 8, representando diferentes níveis de velocidade. O nível de velocidade é escolhido aleatoriamente para cada fantasma quando o jogo começa.
 
