@@ -45,14 +45,14 @@
 
 ### PARTE 4 - Variáveis de Posição e Movimento:
 
-* `private int N_GHOSTS = 6;`
-* `private int lives, score;`
-* `private int[] dx, dy;`
-* `private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;`
-* `private Image heart, ghost;`
-* `private Image up, down, left, right;`
-* `private int pacman_x, pacman_y, pacmand_x, pacmand_y;`
-* `private int req_dx, req_dy;`
+ `private int N_GHOSTS = 6;`<br>
+ `private int lives, score;`<br>
+ `private int[] dx, dy;`<br>
+ `private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;`<br>
+ `private Image heart, ghost;`<br>
+ `private Image up, down, left, right;`<br>
+ `private int pacman_x, pacman_y, pacmand_x, pacmand_y;`<br>
+ `private int req_dx, req_dy;`<br>
 
 * N_GHOSTS: Define o número de fantasmas no jogo. Nesse caso, há inicialmente 6 fantasmas.
 lives, score: Representam as vidas e a pontuação do jogador.
