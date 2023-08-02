@@ -12,48 +12,47 @@
 <strong> Pacote e Importaçoes: </strong>
 * package PacmanCode;
 
-* import java.awt.*;
+* `import java.awt.*;`
   <p>Contém todas as classes para criar interfaces de usuário e para pintar gráficos e imagens. Um objeto de interface do usuário é chamado de componente.</p>
-* import java.awt.event.ActionEvent;
-* import java.awt.event.ActionListener;
-* import java.awt.event.KeyAdapter;
-* import java.awt.event.KeyEvent;
-* import javax.swing.ImageIcon;
+* `import java.awt.event.ActionEvent;`
+* `import java.awt.event.ActionListener;`
+* `import java.awt.event.KeyAdapter;`
+* `import java.awt.event.KeyEvent;`
+* `import javax.swing.ImageIcon;`
   <p>Uma implementação da interface Icon que pinta ícones a partir de imagens. As imagens criadas a partir de um URL, nome de arquivo ou matriz de bytes são pré-carregadas usando o MediaTracker para monitorar o estado carregado da imagem.</p>
-* import javax.swing.JPanel;
-* import javax.swing.Timer;
+* `import javax.swing.JPanel;`
+* `import javax.swing.Timer;`
 
 ### PARTE 2:
 `public class Model extends JPanel implements ActionListener {
-
 }`
 
 <p>A classe Model estende a classe JPanel e implementa a interface ActionListener. Isso significa que essa classe será responsável por representar a tela do jogo e também por escutar os eventos de ação (temporizador).</p>
 
 ### PARTE 3 - Variaveis e Constantes:
 
-`private Dimension d;
-private final Font smallFont = new Font("Arial", Font.BOLD, 14);
-private boolean inGame = false;
-private boolean dying = false;
+`private Dimension d;`
+`private final Font smallFont = new Font("Arial", Font.BOLD, 14);`
+`private boolean inGame = false;`
+`private boolean dying = false;`
 
-private final int BLOCK_SIZE = 24;
-private final int N_BLOCKS = 15;
-private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;
-private final int MAX_GHOSTS = 12;`
+`private final int BLOCK_SIZE = 24;`
+`private final int N_BLOCKS = 15;`
+`private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;`
+`private final int MAX_GHOSTS = 12;`
 
 <p>Nessa parte, são declaradas as variáveis e constantes que serão utilizadas no jogo, como tamanho do bloco(BLOCK_SIZE), tamanho da tela(SCREEN_SIZE), quantidade máxima de fantasmas(MAX_GHOSTS) etc.</p>
 
 ### PARTE 4 - Variáveis de Posição e Movimento:
 
-`private int N_GHOSTS = 6;
-private int lives, score;
-private int[] dx, dy;
-private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;
-private Image heart, ghost;
-private Image up, down, left, right;
-private int pacman_x, pacman_y, pacmand_x, pacmand_y;
-private int req_dx, req_dy;`
+`private int N_GHOSTS = 6;`
+`private int lives, score;`
+`private int[] dx, dy;`
+`private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;`
+`private Image heart, ghost;`
+`private Image up, down, left, right;`
+`private int pacman_x, pacman_y, pacmand_x, pacmand_y;`
+`private int req_dx, req_dy;`
 
 * N_GHOSTS: Define o número de fantasmas no jogo. Nesse caso, há inicialmente 6 fantasmas.
 lives, score: Representam as vidas e a pontuação do jogador.
@@ -105,10 +104,10 @@ A matriz screenData é uma matriz semelhante à levelData e é usada para armaze
 
 ### PARTE 6 - Variáveis do Jogo:
 
-`private final int[] validSpeeds = {1, 2, 3, 4, 6, 8};
-private int currentSpeed = 4;
-private short[] screenData;
-private Timer timer;`
+`private final int[] validSpeeds = {1, 2, 3, 4, 6, 8};`
+`private int currentSpeed = 4;`
+`private short[] screenData;`
+`private Timer timer;`
 
 * validSpeeds: É um array que contém os valores de velocidades válidas para os fantasmas. Esses valores são usados para definir a velocidade de cada fantasma durante o jogo. No código, os valores são 1, 2, 3, 4, 6 e 8, representando diferentes níveis de velocidade. O nível de velocidade é escolhido aleatoriamente para cada fantasma quando o jogo começa.
 
